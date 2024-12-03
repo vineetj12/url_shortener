@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()">🌙/☀️</button>
+    </div>
+
+    <!-- Result Display -->
+    <div class="container">
+        <h1>Your Shortened URL</h1>
+        <p>Shortened URL: <a href="/{{ short_url }}" target="_blank">{{ short_url }}</a></p>
+        <p>Original URL: <a href="{{ long_url }}" target="_blank">{{ long_url }}</a></p>
+        
+        <p>Share this URL:</p>
+        <div>
+            </a>
+        </div>
+        <div>
+            <!-- Twitter Share -->
+            <a class="twitter" href="https://twitter.com/intent/tweet?url={{ url_for('redirect_to_long_url', short_code=short_url, _external=True) }}" target="_blank">
+                Share on Twitter
+            </a>
+        </div>
+        <div>
+            <!-- WhatsApp Share -->
+            <a class="whatsapp" href="https://api.whatsapp.com/send?text={{ url_for('redirect_to_long_url', short_code=short_url, _external=True) }}" target="_blank">
+                Share on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript for Theme Toggle -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

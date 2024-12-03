@@ -1,0 +1,167 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center content and set up dark/light background */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Default theme colors */
+body.light-mode {
+    background-color: #e8e8e8;
+    color: #212121;
+}
+
+body.dark-mode {
+    background-color: #212121;
+    color: #e8e8e8;
+}
+
+body.dark-mode .container {
+    background: #333333;
+}
+
+/* Styling for the container */
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Input styling */
+input[type="url"], input[type="submit"], input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+input[type="url"] {
+    background: #f9f9f9;
+}
+
+input[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #45a049;
+}
+
+/* Result styling */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007BFF;
+}
+
+.result a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.result a:hover {
+    text-decoration: underline;
+}
+
+/* Share buttons styling */
+p {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: inherit;
+}
+
+p a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Updated Share buttons styling */
+div {
+    margin-top: 20px;
+}
+
+div a {
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    color: #333;
+    font-size: 16px;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for the share buttons */
+div a:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: translateY(-3px);  /* Adds a slight lift effect on hover */
+}
+
+/* Specific color styles for each share button */
+div a.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+div a.twitter {
+    background-color: #1da1f2;
+    color: white;
+}
+
+div a.whatsapp {
+    background-color: #25d366;
+    color: white;
+}
+
+/* Hover effects for specific platforms */
+div a.facebook:hover {
+    background-color: #3b5998;
+}
+
+div a.twitter:hover {
+    background-color: #1da1f2;
+}
+
+div a.whatsapp:hover {
+    background-color: #128c7e;
+}
